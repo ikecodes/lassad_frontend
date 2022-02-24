@@ -1,0 +1,70 @@
+.hoteldetail {
+  &-section {
+    text-transform: capitalize;
+    background-color: $color-grey-light-1;
+  }
+  &_search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-secondary;
+    height: 30vh;
+  }
+  &_location {
+    font-size: 1.5rem;
+  }
+  &_carousel {
+    margin: 5rem 0;
+    display: flex;
+  }
+  &_image-box {
+    width: 40rem;
+    padding: 2rem;
+    padding: 2rem 0;
+  }
+  &_image {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+  }
+  &_detail {
+    & input {
+      border: 1px solid $color-primary;
+      outline: none;
+    }
+    & img {
+      background-color: cover;
+      width: 15rem;
+      height: auto;
+    }
+    & p {
+      font-size: 1.5rem;
+      color: $color-grey-dark-1;
+    }
+    & h1 {
+      margin: 2rem 0;
+      color: $color-secondary;
+      font-size: 2rem;
+    }
+    & ul {
+      background-color: $color-white;
+      padding: 3rem 0;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    & li {
+      display: flex;
+
+      font-size: 1.5rem;
+      align-items: center;
+
+      & span {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

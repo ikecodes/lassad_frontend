@@ -1,0 +1,75 @@
+//////////////////////////////ABOUT
+.others {
+  position: relative;
+  margin: 5rem;
+  padding: 5rem;
+  background-color: $color-secondary;
+
+  @media only screen and (max-width: $bp-small) {
+    margin: 0;
+  }
+
+  &-box {
+    width: 80%;
+    margin: 5rem auto;
+    @media only screen and (max-width: $bp-smallest) {
+      margin: 0;
+      margin: 5rem auto;
+    }
+
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+
+    &-text {
+      font-size: 1.5rem;
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+////////////////////////// FAQ
+.faq {
+  margin: 5rem;
+  padding: 5rem;
+  background-color: $color-grey-lt-1;
+
+  @media only screen and (max-width: $bp-small) {
+    margin: 0;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+  &__question {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: $color-primary-dark;
+    font-weight: 700;
+  }
+  &__answer {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: $color-good;
+  }
+}
+
+////////////TERMS
+.terms {
+  width: 80%;
+  margin: 5rem auto;
+
+  &__item {
+    font-size: 1.5rem;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,0 +1,191 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-family: $font-display;
+    font-size: $default-font-size;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+    }
+
+    ///change for <button> element
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+  &--gold {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
+  &::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    border-radius: 10rem;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+  }
+  &--animated {
+    animation: moveInBottom 0.75s ease-out;
+    animation-fill-mode: backwards;
+  }
+}
+
+.btn-head {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-family: $font-display;
+    font-size: $default-font-size;
+    background-color: $color-primary;
+    color: $color-white;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+    }
+    ///change for <button> element
+    border: none;
+    cursor: pointer;
+  }
+
+  &:active,
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: $color-primary-dark;
+  }
+}
+
+.btn--form {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s;
+    font-family: $font-display;
+    font-size: 1.5rem;
+    color: $color-primary;
+
+    ///change for <button> element
+    border: none;
+    cursor: pointer;
+  }
+
+  &:active,
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $color-primary-dark;
+  }
+}
+
+.btn-trade {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 3rem;
+    transition: all 0.3s;
+    position: relative;
+    font-family: $font-display;
+    font-size: 1.5rem;
+    background-color: $color-primary;
+    color: $color-white;
+    margin-bottom: 2rem;
+    box-shadow: $shadow2;
+
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(5px);
+    background-color: $color-primary-dark;
+  }
+}
+.btn-payment {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 3rem;
+    transition: all 0.3s;
+    position: relative;
+    font-family: $font-display;
+    font-size: 1rem;
+    color: $color-white;
+    // margin-bottom: 2rem;
+    box-shadow: $shadow2;
+
+    border: none;
+    cursor: pointer;
+  }
+  &-confirm {
+    background-color: $color-good;
+  }
+  &-cancel {
+    background-color: $color-bad;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(5px);
+  }
+}

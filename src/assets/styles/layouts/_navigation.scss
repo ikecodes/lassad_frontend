@@ -1,0 +1,119 @@
+.navigation {
+  &__button {
+    background-color: $color-primary;
+    position: fixed;
+    top: 5rem;
+    right: 1.5rem;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    z-index: 2000;
+    box-shadow: $shadow;
+    text-align: center;
+    cursor: pointer;
+
+    &.clicked .navigation__icon {
+      background-color: transparent;
+    }
+    &.clicked .navigation__icon::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+
+    &.clicked .navigation__icon::after {
+      top: 0;
+      transform: rotate(-135deg);
+    }
+  }
+
+  &__icon {
+    position: relative;
+    margin-top: 3rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 3px;
+      background-color: $color-white;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__nav {
+    height: 100vh;
+    width: 0;
+    opacity: 0;
+    z-index: 1500;
+    position: fixed;
+    background-color: rgba($color-secondary, 0.95);
+    transform-origin: center;
+    transition: all 0.2s ease-in;
+
+    &.clicked {
+      opacity: 1;
+      width: 30%;
+
+      @media only screen and (max-width: $bp-medium) {
+        width: 60%;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        width: 100%;
+      }
+    }
+  }
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    margin-left: 5rem;
+    width: 0;
+    opacity: 0;
+    display: none;
+    transition: all 0.4s ease-in;
+
+    &.clicked {
+      display: block;
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      color: $color-primary;
+      text-transform: capitalize;
+      font-size: 2.5rem;
+      font-weight: 300;
+      text-decoration: none;
+
+      &.activated {
+        color: #fff;
+      }
+    }
+
+    &:active,
+    &:hover {
+      color: $color-primary-dark;
+    }
+  }
+}

@@ -1,0 +1,169 @@
+.u-centre-text {
+  text-align: center !important;
+}
+
+.mt-sm {
+  margin-top: 2rem !important;
+}
+.mb-sm {
+  margin-bottom: 2rem !important;
+}
+.mb-md {
+  margin-bottom: 3rem !important;
+}
+.mb-lg {
+  margin-bottom: 4rem !important;
+}
+.mb-hg {
+  margin-bottom: 8rem !important;
+}
+
+.mt-hg {
+  margin-top: 8rem !important;
+}
+
+///////////////// PLANS
+.bronze {
+  color: $bronze !important;
+}
+
+.silver {
+  color: $silver !important;
+}
+
+.diamond {
+  color: $diamond !important;
+}
+.gold {
+  color: $gold !important;
+}
+.platium {
+  color: $platinum !important;
+}
+
+////////////////////////////////WRAPPER
+.wrapper {
+  padding: 3rem;
+}
+
+///////////////////////// ALERT CLASS
+
+.alert {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 9999;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 1.6rem 15rem;
+  box-shadow: 0 2rem 4rem rgba(#000, 0.25);
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 1.2rem;
+    padding: 1.2rem 8rem;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 1.2rem;
+    padding: 1.2rem 8rem;
+  }
+
+  &--success {
+    background-color: $color-good;
+  }
+  &--error {
+    background-color: $color-bad;
+  }
+}
+
+/////////////////////////////////ERROR PAGE
+
+.error {
+  height: 100vh;
+  width: 100%;
+  background-color: $color-grey-lt-2;
+  position: relative;
+  &__box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__heading {
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  &__emoji {
+    font-size: 3rem;
+    padding-bottom: 3rem;
+  }
+  &__message {
+    text-transform: capitalize;
+  }
+}
+
+.email {
+  height: 100vh;
+  background-color: $color-grey-lt-2;
+
+  &__head {
+    background-color: $color-secondary;
+    color: #fff;
+    padding: 2rem;
+    text-transform: uppercase;
+  }
+
+  &__close {
+    background-color: $color-secondary;
+    color: #fff;
+    padding: 2rem;
+    text-transform: uppercase;
+  }
+}
+
+//////////////FIX NUMBER ARROW BUTTON
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.contact-support {
+  &:link,
+  &:visited {
+    font-size: 1.5rem;
+    color: $color-primary;
+  }
+  &:active,
+  &:hover {
+    color: $color-primary-dark;
+  }
+}
+
+///////////////////////FIX FORM ZOOM IOS
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select:focus,
+textarea {
+  font-size: 16px !important;
+}

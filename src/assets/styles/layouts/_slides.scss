@@ -1,0 +1,44 @@
+$animation-timing: 27s;
+$carousel-items: 9;
+$animation-delay-fraction: calc($animation-timing / $carousel-items);
+$animation-steps-fraction: calc(100 / $carousel-items);
+$slide-change-timing: 3; // percentage of total animation cycle
+
+.wrapper-wrapper {
+  height: 50vh;
+}
+
+.wrapper-carousel {
+  position: relative;
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.93),
+      rgba($color-secondary, 0.93)
+    ),
+    url(../../images/logo-home.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & div {
+    text-align: center;
+  }
+  & h1 {
+    color: $color-white;
+    font-size: 4rem;
+  }
+  & p {
+    font-size: 1.5rem;
+  }
+}
+
+.search_bar {
+  padding: 1rem 2rem;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}

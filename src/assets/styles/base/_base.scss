@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-grey-dark-2;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+
+#google_translate_element {
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  left: 5px;
+}
+.goog-te-gadget {
+  font-family: Roboto, 'Open Sans', sans-serif !important;
+  text-transform: uppercase;
+  font-size: 0px;
+}
+.goog-logo-link,
+.goog-logo-link:link,
+.goog-logo-link:visited,
+.goog-logo-link:hover,
+.goog-logo-link:active {
+  font-size: 8px;
+}
+.goog-te-combo {
+  font-size: 2rem;
+  padding: 0.5rem;
+  background: $color-secondary;
+  color: $color-white;
+}
+body {
+  top: 0px !important;
+}

@@ -1,0 +1,126 @@
+.book {
+  position: relative;
+  height: 115vh;
+  margin: 5rem;
+  background-color: $color-secondary;
+  @media only screen and (max-width: $bp-small) {
+    margin: 0;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    margin: 0;
+  }
+}
+.book-register {
+  position: relative;
+  height: 140vh;
+  margin: 5rem;
+  background-color: $color-secondary;
+  @media only screen and (max-width: $bp-small) {
+    margin: 0;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    margin: 0;
+  }
+}
+
+.form {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: 1rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1.5rem 2rem;
+    color: inherit;
+    border-radius: 3px;
+    background-color: $color-white;
+    border: none;
+    width: 100%;
+    display: block;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 1rem 1.5rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 1rem 1.5rem;
+    }
+
+    //   @include respond(tab-port) {
+    //     width: 100%;
+    //   }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: 3px solid $color-good;
+
+      &:invalid {
+        border-bottom: 3px solid $color-bad;
+      }
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-dark-2;
+    }
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.4s;
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__divider {
+    height: 100%;
+    width: 10px;
+    margin: 0 2rem;
+    background-color: $color-primary-dark;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    width: 80%;
+  }
+
+  /////////////////////////////////////////////////////////////CHECKBOX
+  &__checkbox-group {
+    margin-bottom: 2rem;
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: 1rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__checkbox-label {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }
+}

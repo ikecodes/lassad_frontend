@@ -1,0 +1,24 @@
+@import './assets/styles/abstracts/functions';
+@import './assets/styles/abstracts/mixins';
+@import './assets/styles/abstracts/variables';
+
+@import './assets/styles/base/animations';
+@import './assets/styles/base/base';
+@import './assets/styles/base/typography';
+@import './assets/styles/base/utilities';
+
+@import './assets/styles/components/button';
+@import './assets/styles/components/reviews';
+
+@import './assets/styles/layouts/welcome';
+@import './assets/styles/layouts/top';
+@import './assets/styles/layouts/footer';
+@import './assets/styles/layouts/slides';
+@import './assets/styles/layouts/header';
+@import './assets/styles/layouts/navigation';
+@import './assets/styles/layouts/choose';
+
+@import './assets/styles/pages/form';
+@import './assets/styles/pages/others';
+@import './assets/styles/pages/hotelDetail';
+@import './assets/styles/pages/checkout';
