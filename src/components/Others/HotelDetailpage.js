@@ -104,7 +104,7 @@ const HotelDetailpage = () => {
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-6'>
-              <h1>Information about Swiss International Beland Hotel</h1>
+              <h1>Information about {hotel.name} Hotel</h1>
               <ul>
                 <li>
                   <FaSwimmingPool color='blue' />
@@ -128,7 +128,7 @@ const HotelDetailpage = () => {
               </div>
             </div>
             <div className='col-lg-6'>
-              <h1>Book rooms in Swiss International Beland Hotel online</h1>
+              <h1>Book rooms in {hotel.name} Hotel online</h1>
 
               <div className='d-flex align-items-center gap-3'>
                 <div className='d-flex align-items-center'>
