@@ -1,4 +1,9 @@
-import { AUTH, GET_USER, LOGOUT } from '../../constants/actionTypes';
+import {
+  AUTH,
+  GET_USER,
+  GET_HOTELS,
+  LOGOUT,
+} from '../../constants/actionTypes';
 import Toast from '../../utils/Toast';
 
 import * as api from '../../api/api';
@@ -40,6 +45,26 @@ export const logout = (navigate) => async (dispatch) => {
   try {
     dispatch({ type: LOGOUT });
     Toast('logging you out', 'info');
+    navigate('/');
+  } catch (error) {
+    Toast(error?.response?.data?.message, 'error');
+  }
+};
+
+export const getHotels = () => async (dispatch) => {
+  try {
+    const {
+      data: { hotels },
+    } = await api.getHotels();
+    dispatch({ type: GET_HOTELS, data: hotels });
+  } catch (error) {
+    Toast(error?.response?.data?.message, 'error');
+  }
+};
+export const makeReservation = (formdata, navigate) => async (dispatch) => {
+  try {
+    await api.addBooking(formdata);
+    Toast('successfully made reservation', 'success');
     navigate('/');
   } catch (error) {
     Toast(error?.response?.data?.message, 'error');

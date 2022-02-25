@@ -1,8 +1,15 @@
-import { AUTH, GET_USER, UPDATE_USER, LOGOUT } from '../../constants/actionTypes';
+import {
+  AUTH,
+  GET_USER,
+  GET_HOTELS,
+  UPDATE_USER,
+  LOGOUT,
+} from '../../constants/actionTypes';
 const auth = (
   state = {
     token: null,
     user: null,
+    hotels: [],
   },
   action
 ) => {
@@ -17,6 +24,11 @@ const auth = (
       return {
         ...state,
         user: action.data,
+      };
+    case GET_HOTELS:
+      return {
+        ...state,
+        hotels: action.data,
       };
     case UPDATE_USER:
       return {

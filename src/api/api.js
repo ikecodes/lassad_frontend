@@ -1,8 +1,9 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000';
+// const url = 'http://localhost:5000';
+const remote_url = 'https://lassod.herokuapp.com/api/v2';
 
-const API = axios.create({ baseURL: url });
+const API = axios.create({ baseURL: remote_url });
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem('token')) {
@@ -12,8 +13,8 @@ API.interceptors.request.use((req) => {
 });
 
 ////AUTH
-export const login = (formdata) => API.post('/login', formdata);
-export const getMe = () => API.get('/me');
-export const signup = (formdata) => API.post('/signup', formdata);
-export const addHotel = (formdata) => API.post('/addHotel', formdata);
-export const addBooking = (formdata) => API.post('/addBooking', formdata);
+export const login = (formdata) => API.post('/users/login', formdata);
+export const getMe = () => API.get('/users/me');
+export const signup = (formdata) => API.post('/users/signup', formdata);
+export const getHotels = () => API.get('/hotels');
+export const addBooking = (formdata) => API.post('/bookings', formdata);
